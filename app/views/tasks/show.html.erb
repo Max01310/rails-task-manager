@@ -1,0 +1,13 @@
+<h1><%= @task.title%></h1>
+<div><h2><%= @task.details%></h2></div>
+<h3>
+<% if @task.completed? %>
+<%= check_box_tag :completed, true, true  %>
+<% else %>
+<%= check_box_tag :completed %>
+<% end %>
+</h3>
+
+<%= link_to 'back', tasks_path %>
+
+<%# <input type="checkbox" name="tag_ids[]" value="1" />    %>
